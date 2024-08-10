@@ -8,8 +8,9 @@ backend:
 frontend:
   phases:
     preBuild:
-      - cd app
-      - npm ci
+      commands:
+        - cd app
+        - npm ci
     build:
       commands:
         - npm run build
